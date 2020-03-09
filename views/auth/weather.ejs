@@ -23,12 +23,16 @@
             <option name='<% place.location %> '><%= `${place.location}, ${place.country}` %></option>
             <%})%> 
         </select>
-        <button type="submit">Find!!!</button>
+        <button type="submit">Find</button>
     </fieldset>
 </form>
 </div>
     <div class="container">
-        <div class="location">
+        <div class="location" 
+            style="background-image: url('../images/<%= location[0].image%>');
+                background-size: 70%;
+                background-position: center;
+                background-repeat: no-repeat;">
             <h1 class="location-timezone"> <%= location[0].location %> </h1>
         </div>
         <div class="temperature">
