@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= title %></title>
+    <% include ../partials/head %>  
+    <link href="../stylesheets/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="sidenav">
+      <div class="login-main-text">
+        <h2>Weather App<br> Login Page</h2>
+        <p>Login or register from here to access.</p>
+    </div>
+  </div>
+  <div class="main">
+    <div class="col-md-6 col-sm-12">
+        <div class="login-form">
+          <form role="form" method="POST" action="/users/login">
+            <fieldset>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="text" name="email" class="form-control" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control" placeholder="Password">
+              </div>
+              <button type="submit" class="btn btn-black">Login</button>
+              <a href="/users/register" class="btn btn-secondary">Register</a>
+            </fieldset>
+          </form>
+        </div>
+    </div>
+  </div>
+  </body>
+</html>

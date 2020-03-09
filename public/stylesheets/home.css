@@ -1,0 +1,38 @@
+.my-nav {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+}
+
+.location,
+.temperature {
+    margin-top: 50px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.temperature {
+    flex-direction: column;
+}
+
+.degree-section {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.degree-section span {
+    margin: 10px;
+    font-size: 30px;
+}
+
+.degree-section h2 {
+    font-size: 40px;
+}
+
+.dropdown {
+    margin-top: 50px;
+    margin-left: 70px;
+}

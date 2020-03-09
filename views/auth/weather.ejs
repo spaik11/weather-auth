@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="css/stylewise.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="../stylesheets/home.css" rel="stylesheet" type="text/css">
+<title></title>
+</head>
+<body>
+<header>
+    <% include ../partials/nav %> 
+</header><br/>
+<form method="GET" action="/auth/weather">
+    <fieldset>
+    <div class="dropdown">
+        <select id="location">
+            <% places.forEach((place) => { %> 
+            <option name='<% place.location %> '><%= `${place.location}, ${place.country}` %></option>
+            <%})%> 
+        </select>
+        <button type="submit">Find!!!</button>
+    </fieldset>
+</form>
+</div>
+    <div class="container">
+        <div class="location">
+            <h1 class="location-timezone"> <%= location[0].location %> </h1>
+        </div>
+        <div class="temperature">
+            <div class="degree-section">
+            <h2 class="temperature-degree"><%= currentWeather.currently.temperature %></h2>
+            <span>F</span>
+            </div>
+            <div class="temperature-description"><%= currentWeather.currently.summary %></div>
+        </div>
+    </div> 
+</body>
+<% include ../partials/script %> 
+</html>
