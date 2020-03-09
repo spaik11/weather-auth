@@ -17,20 +17,17 @@
 </header><br/>
 <form method="GET" action="/auth/weather">
     <fieldset>
-    <div class="dropdown">
-        <select id="location">
-            <% places.forEach((place) => { %> 
-            <option name='<% place.location %> '><%= `${place.location}, ${place.country}` %></option>
-            <%})%> 
-        </select>
+    <div class="dropdown" style="float: right;">
+        <label for="location">Input a location:</label>
+        <input type="text" name="location">
         <button type="submit">Find</button>
+    </div>
     </fieldset>
 </form>
-</div>
     <div class="container">
         <div class="location" 
             style="background-image: url('../images/<%= location[0].image%>');
-                background-size: 70%;
+                background-size: 60%;
                 background-position: center;
                 background-repeat: no-repeat;">
             <h1 class="location-timezone"> <%= location[0].location %> </h1>

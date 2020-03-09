@@ -6,8 +6,7 @@
 
 .location,
 .temperature {
-    margin-top: 50px;
-    height: 30vh;
+    height: 35vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +18,7 @@
 
 .degree-section {
     display: flex;
-    align-items: center;
+    align-items: top;
     cursor: pointer;
 }
 
@@ -34,5 +33,5 @@
 
 .dropdown {
     margin-top: 50px;
-    margin-left: 70px;
+    margin-right: 70px;
 }
